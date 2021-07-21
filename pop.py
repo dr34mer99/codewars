@@ -2,16 +2,19 @@ import math as m
 import numpy as np
 
 class Satka:
-    def __init__(self):
+    def __init__(self, fi, lam, h):
         super().__init__()
+        self.fi = fi
+        self.lam = lam
+        self.h = h
 
     def blh2xyz(self, fi, lam, h, elipsoid=None):
         try:
             elipsoid_type = {'everest': [6377276.345, 0.00663785],
                              'bessel': [6377397.155, 0.00667437],
                              'clarke': [6378206.400, 0.00676866],
-                             'clarke modiself.fied': [6378249.145, 0.00680351],
-                             'self.hayford': [6378388.000, 0.00672267],
+                             'clarke modified': [6378249.145, 0.00680351],
+                             'hayford': [6378388.000, 0.00672267],
                              'krasowski': [6378245.000, 0.00669342],
                              'international': [6378160.000, 0.00669454],
                              'wgs72': [6378135.000, 0.00669432],
@@ -48,5 +51,5 @@ class Satka:
         el = m.asin(xneu[2] / m.sqrt(xneu[0] ** 2 + xneu[1] ** 2 + xneu[2] ** 2))
         return az, el
     
-sat=Satka()
-print(sat.azel(0,0,0,0,0,0))
+sat=Satka
+print(sat.azel(1,1,1,1,1,1,1))
