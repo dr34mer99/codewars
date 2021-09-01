@@ -30,6 +30,7 @@ Example output
 False
 '''
 
+#unfinished
 
 def wyplaszcz(lista):
     ret = []
@@ -48,9 +49,7 @@ def has_exit(maze):
     b[0] = list(b[0])
     b[1] = list(b[1])
     b = wyplaszcz(b)
-    if ' ' in b:
-        return True
-    else:
+    if ' ' not in b:
         return False
 
 maze = ["########",
